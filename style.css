@@ -39,14 +39,8 @@ body {
 }
 
 .container {
-  width: 25vw;          /* kira-kira setara 200px di layar lebar 800px */
-  max-width: 400px;     /* jangan lebih besar dari 400px */
-  min-width: 180px;     /* jangan lebih kecil dari 180px */
-  
-  height: 40vh;         /* kira-kira setara 300px di layar tinggi 750px */
-  max-height: 500px;    /* batas maksimal */
-  min-height: 280px;    /* batas minimal */
-
+  width: clamp(180px, 25vw, 200px);   /* selalu sekitar 200px, tapi fleksibel */
+  height: clamp(280px, 40vh, 300px);  /* selalu sekitar 300px */
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255,255,255,0.4);
   box-shadow: 0 0 20px rgba(255, 120, 180, 0.6);
@@ -59,6 +53,7 @@ body {
   padding: 5%;
   backdrop-filter: blur(8px);
 }
+
 
 .love-text {
   font-size: 22px;
