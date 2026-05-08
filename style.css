@@ -39,8 +39,8 @@ body {
 }
 
 .container {
-  width: clamp(180px, 25vw, 200px);   /* selalu sekitar 200px, tapi fleksibel */
-  height: clamp(280px, 40vh, 300px);  /* selalu sekitar 300px */
+  width: clamp(300px, 50vw, 400px);   /* target sekitar 400px */
+  height: clamp(450px, 80vh, 600px);  /* target sekitar 600px */
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255,255,255,0.4);
   box-shadow: 0 0 20px rgba(255, 120, 180, 0.6);
@@ -54,9 +54,8 @@ body {
   backdrop-filter: blur(8px);
 }
 
-
 .love-text {
-  font-size: 22px;
+  font-size: clamp(24px, 6vw, 36px);
   font-weight: bold;
   color: #ff3399;
   text-shadow: 0 0 8px rgba(255, 100, 150, 0.8),
@@ -65,16 +64,14 @@ body {
 }
 
 .sub-text {
-  font-size: 14px;
-  color: #d63384;
+  font-size: clamp(16px, 4vw, 22px);  color: #d63384;
   text-shadow: 0 0 5px rgba(255, 150, 200, 0.6);
   min-height: 100px;
   line-height: 1.3;
 }
 
 .bottom-text {
-  font-size: 7px;
-  font-weight: bold;
+  font-size: clamp(14px, 3.5vw, 20px);  font-weight: bold;
   color: #ff1a75;
   text-shadow: 0 0 6px rgba(255, 100, 150, 0.7);
   min-height: 24px;
