@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I Love You</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Scene 1: Instruksi + Tombol -->
+  <div class="scene" id="scene1">
+    <h2 class="instruction">DIPENCET YA SAYANG ❤️</h2>
+    <button class="circle-btn" onclick="showScene2()">💖</button>
+  </div>
+
+  <!-- Scene 2: Pesan cinta -->
+  <div class="scene hidden" id="scene2">
+    <div class="container">
+      <h1 class="love-text">I LOVE YOU ❤️❤️</h1>
+      <p class="sub-text" id="typing"></p>
+      <p class="bottom-text" id="typing-bottom"></p>
+    </div>
+  </div>
+
+  <script>
+    const text1 = "Aku bersyukur setiap hari bisa punya kamu di hidupku, sayang. Kamu adalah alasan aku tersenyum, semangatku, dan tempat aku pulang. 💖";
+    const text2 = "AKU AKAN SELALU SAYANG KAMU, SAMPAI KAPAN PUN SAYANG❤️❤️";
+    let i = 0, j = 0;
+
+    function typeWriter1() {
+      if (i < text1.length) {
+        document.getElementById("typing").innerHTML += text1.charAt(i);
+        i++;
+        setTimeout(typeWriter1, 80);
+      } else {
+        setTimeout(typeWriter2, 500);
+      }
+    }
+
+    function typeWriter2() {
+      if (j < text2.length) {
+        document.getElementById("typing-bottom").innerHTML += text2.charAt(j);
+        j++;
+        setTimeout(typeWriter2, 80);
+      }
+    }
+
+    function showScene2() {
+      document.getElementById("scene1").classList.add("hidden");
+      document.getElementById("scene2").classList.remove("hidden");
+      typeWriter1();
+    }
+  </script>
+</body>
+</html>
